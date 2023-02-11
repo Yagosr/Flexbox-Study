@@ -1,0 +1,156 @@
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #1a1924;
+    font-size: 1.6rem;
+    color: white;
+  
+}
+
+body * {
+    font-family: 'roboto', sans-serif;
+}
+
+#app {
+    max-width: 400px;
+    margin:auto;
+    gap: 2rem;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content  ;
+
+}
+
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+#user-info img{
+    width: 6rem;
+    height: 4.8rem;
+    border-radius: 10rem;
+    object-fit: cover;
+}
+
+
+#user-status .status {
+    display:flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    padding-top: 0.4rem; ;
+}
+
+#user-status .status::before {
+    content: "";
+    width:0.8rem;
+    height: 0.8rem;
+    display: block;
+    background-color:#00b37e;
+    border-radius: 50%;
+}
+
+#user-status .status {
+    color: #00b37e;
+    font-size: 1.2rem;
+}
+
+#last-seen {
+    margin-top: 2.6rem;
+    font-size: 1.5rem;
+    line-height:1.4rem;
+    text-align: center;
+}
+
+.message .send-user {
+    font-size: 1rem;
+}
+
+.messages {
+    margin-top: 3rem;
+    display: grid;
+    gap: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+.message:not(.you){
+    width: 50vh;
+}
+
+.message .body {
+    margin-top: 1rem;
+    background-color: purple;
+    padding: 1.4rem;
+    border-radius: 0 .8rem .8rem .8rem;
+    width: fit-content;
+}
+
+.message.you {
+    margin-left: auto;
+}
+
+.message.you .send-user {
+    text-align: right;
+}
+
+.message.you .body {
+    background-color:green;
+    border-radius: .8rem .8rem .0 .8rem;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    background: #282843;
+    border-radius: 999rem;
+    padding: 1.2rem 2.4rem;
+    max-width: 400px;
+    margin: auto;
+}
+
+input {
+    flex: 1;
+    color: #ffffff;
+    outline: none;
+}
+
+form:focus-within {
+    outline: 2px solid #ffffff;
+}
+ 
+input::placeholder {
+    color: #ffffff;
+    font-size:1.2rem;
+    line-height: 1.4rem;
+    
+}
+
+button i {
+    color: #ffff;
+    font-size: 2.4rem;
+}
+
+input, button {
+    background:transparent;
+    border: none;
+
+}
